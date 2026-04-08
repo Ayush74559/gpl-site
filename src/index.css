@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-agri-green: #2E7D4F;
+  --color-agri-dark-green: #1F5735;
+  --color-agri-light-green: #6FBF73;
+  --color-agri-bg: #F8FAF9;
+  --color-agri-text-dark: #1F2D2B;
+  --color-agri-text-light: #6B7280;
+  --color-agri-blue: #0088cc;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-agri-text-dark antialiased bg-agri-bg;
+  }
+}
+
+.glass-nav {
+  @apply bg-white/90 backdrop-blur-md;
+}
+
+.btn-primary {
+  @apply bg-agri-green hover:bg-agri-dark-green text-white px-6 py-3 rounded-md font-medium transition-colors flex items-center gap-2;
+}
+
+.btn-outline {
+  @apply border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-gray-900 transition-all;
+}
